@@ -6,8 +6,8 @@ import 'package:point_sale_app/src/ui/shared/widgets/inputs/custom_inputs.dart';
 import 'package:point_sale_app/src/ui/shared/widgets/text/custom_text_style.dart';
 import 'package:point_sale_app/src/utils/app_colors.dart';
 
-class LoginView extends StatelessWidget {
-  const LoginView({Key? key}) : super(key: key);
+class RegisterView extends StatelessWidget {
+  const RegisterView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -19,20 +19,31 @@ class LoginView extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              "Welcome back!",
-              style: CustomTextStyle.textStyle(30, AppColors.textColor, true),
-            ),
-            const SizedBox(height: 10),
-            Text(
-              "Please sign in to continue",
+              "Please sign out to continue",
               style:
-                  CustomTextStyle.textStyle(14, AppColors.textColor2, false),
+                  CustomTextStyle.textStyle(30, AppColors.textColor, true),
+            ),
+            const SizedBox(height: 40),
+            TextFormField(
+              decoration: CustomInputs.loginInputDecoration(
+                hint: 'Pepito',
+                label: 'Your First name',
+                icon: Icons.account_circle_outlined,
+              ),
             ),
             const SizedBox(height: 20),
             TextFormField(
               decoration: CustomInputs.loginInputDecoration(
-                hint: 'ID number',
-                label: 'Sales ID number',
+                hint: 'Perez',
+                label: 'Your Last name',
+                icon: Icons.account_circle_outlined,
+              ),
+            ),
+            const SizedBox(height: 20),
+            TextFormField(
+              decoration: CustomInputs.loginInputDecoration(
+                hint: 'example@example.com',
+                label: 'Your email',
                 icon: Icons.account_circle_outlined,
               ),
             ),
@@ -59,11 +70,9 @@ class LoginView extends StatelessWidget {
                   onFacebookPressed: () {},
                 ),
                 const SizedBox(height: 40),
-                const LinkText(text: "Forgot password?"),
-                const SizedBox(height: 20),
                 const LinkText(
-                  text: "Don't have an account? go to "
-                      "registration",
+                  text: "Do you have an account? go to "
+                      "login",
                   color: AppColors.textColor2,
                 ),
               ],

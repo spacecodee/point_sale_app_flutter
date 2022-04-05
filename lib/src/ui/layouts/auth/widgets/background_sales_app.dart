@@ -74,6 +74,7 @@ class _BackgroundSalesAppState extends State<BackgroundSalesApp> {
       margin: const EdgeInsets.symmetric(horizontal: 15),
       child: SvgPicture.asset(
         urlImage,
+        fit: BoxFit.cover,
       ),
     );
   }
