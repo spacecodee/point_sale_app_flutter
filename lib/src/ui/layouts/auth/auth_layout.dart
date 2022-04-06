@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:point_sale_app/src/ui/layouts/auth/widgets/background_sales_app.dart';
-import 'package:point_sale_app/src/ui/shared/view/auth/login_view.dart';
 import 'package:point_sale_app/src/ui/shared/view/auth/register_view.dart';
 import 'package:point_sale_app/src/utils/app_colors.dart';
 
@@ -50,7 +49,8 @@ class _DesktopBody extends StatelessWidget {
             child: Column(
               children: [
                 const Spacer(),
-                const RegisterView(),
+                const SingleChildScrollView(
+                    child: RegisterView()),
                 const Spacer(),
                 Text(
                   "2022 Spacecodee | Point sale app",

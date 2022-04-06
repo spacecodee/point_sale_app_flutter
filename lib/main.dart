@@ -20,8 +20,8 @@ Future<void> _windowManagerOnlyDesktop() async {
   windowManager.waitUntilReadyToShow().then((_) async {
     await windowManager.ensureInitialized();
     // Hide window title bar
-    await windowManager.setMinimumSize(const Size(400, 650));
-    await windowManager.setSize(const Size(1050, 600));
+    await windowManager.setMinimumSize(const Size(400, 600));
+    await windowManager.setSize(const Size(1200, 800));
     await windowManager.center();
     await windowManager.show();
     await windowManager.setSkipTaskbar(false);
